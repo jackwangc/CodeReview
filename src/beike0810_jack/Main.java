@@ -1,7 +1,0 @@
-package beike0810_jack;
-
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("ztest1234");
-    }
-}
