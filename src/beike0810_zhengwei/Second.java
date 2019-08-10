@@ -1,6 +1,4 @@
-package beike0810_zhengwei;
-
-public class Main {
+public class Second {
     public static void main(String[] args) {
         System.out.println("zw123");
     }
