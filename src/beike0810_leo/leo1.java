@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  给定两个正整数N和S，你需要找对所有的长度为N的正整数数列中，满足单调递增以及总和为S的数列有多少个
+ 测试 输入 3 10 输出 4
  */
 public class leo1 {
     private static int num =0;
@@ -12,12 +13,15 @@ public class leo1 {
         System.out.println(findNum(n,s));
     }
     public static int   findNum(int n,int s){
-        if (check(n,s)&&n==2) num++;
-        if (check(n,s)){
+
+        if (n==2&&check(n,s)){
+                num++;
+        }else if(n>2&&check(n,s)){
             for(int i=1;i<s/2;i++){
                 findNum(n-1,s-i);
             }
         }
+
         return num;
     }
 
