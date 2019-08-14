@@ -4,12 +4,12 @@ public class leo3{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        String[] strs = str.split(",|\\[|\\]");
+        String[] strs = str.split(",|，|\\[|\\]");
         int n = strs.length;
         int[] a = new int[n];
-        for(int i=1;i<strs.length-1;i++){
+        for(int i=1;i<strs.length;i++){
             if(strs[i]!=""){
-                a[i]=Integer.parseInt(strs[i]);
+                a[i-1-1]=Integer.parseInt(strs[i]);
             }
         }
         System.out.println(solution(a));
