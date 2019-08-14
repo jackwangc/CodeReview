@@ -10,25 +10,35 @@ public class leo1 {
         Scanner sc = new Scanner(System.in);
         int n =sc.nextInt();
         int s =sc.nextInt();
-        System.out.println(findNum(n,s));
+        findNum(1,n,s);
+        System.out.println(num%1000000007);
     }
-    public static int   findNum(int n,int s){
+    public static boolean   findNum(int start,int n,int s){
+            if(n==1){
+                if(start==s) {
+                    num++;
+                    return true;
+                }
+                if(start>s){
+                    return true;
+                }
 
-        if (n==2&&check(n,s)){
-                num++;
-        }else if(n>2&&check(n,s)){
-            for(int i=1;i<s/2;i++){
-                findNum(n-1,s-i);
             }
-        }
 
-        return num;
+            if(n>1&&s>start){
+                for(int i=start;i<s;i++){
+                    if(findNum(i+1,n-1,s-start)){
+                        break;
+                    }
+                }
+            }
+        return false;
     }
 
     //判断是否存在长度为N，总和为S的单调递增正整数序列
-    public  static  boolean check(int n,int s){
+    public  static  boolean check(int statr,int n,int s){
         boolean result= true;
-        int min=0;
+        int min=statr;
         for(int i=1;i<=n;i++){
             min=min+i;
         }
