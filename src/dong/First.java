@@ -1,8 +1,7 @@
+package dong;
 
-
-public class First
-{
-    public static void main(String[] args){
-
-    }
+/**
+ * Created by WangJun on 2019/8/14.
+ */
+public class First {
 }
