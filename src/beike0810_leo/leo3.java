@@ -14,6 +14,7 @@ public class leo3{
         System.out.println(solution(a));
     }
     public static int solution(int[] a){
+
         return a[0];
     }
 }
