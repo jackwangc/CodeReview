@@ -38,7 +38,14 @@ public class san2 {
                 for(int k=0;k<n2.length;k++){
                     temp[k]=(res1.get(i).get(k)+res2.get(j).get(k))%n1.length;
                 }
-               // while(temp[0]&&)
+                int p1=0;
+                while(temp[p1]>n3[p1]&&p1<len){
+                    if(p1==len-1){
+                        n3=temp;
+                        break;
+                    }
+                    p1--;
+                }
             }
         }
         return n3;
