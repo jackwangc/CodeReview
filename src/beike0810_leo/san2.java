@@ -31,24 +31,28 @@ public class san2 {
         int len = n1.length;
         permutation_dupl1(n1);
         permutation_dupl2(n2);
-        int[] n3=n1;
+        int[] result=n1;
+        int p1=0;
         for(int i=0;i<n1.length;i++){
             for(int j=0;j<n2.length;j++){
                 int[] temp=new int[len];
                 for(int k=0;k<n2.length;k++){
                     temp[k]=(res1.get(i).get(k)+res2.get(j).get(k))%n1.length;
                 }
-                int p1=0;
-                while(temp[p1]>n3[p1]&&p1<len){
-                    if(p1==len-1){
-                        n3=temp;
-                        break;
-                    }
-                    p1--;
+
+                double temppow=0;
+                double resultpow=0;
+                for(int l=0;l<n2.length;l++){
+                    temppow+=Math.pow(temp[l],n2.length-l);
+                    resultpow+=Math.pow(result[l],n2.length-l);
                 }
+                if(temppow>resultpow){
+                    result=temp;
+                }
+
             }
         }
-        return n3;
+        return result;
     }
     private static ArrayList<ArrayList<Integer>> permutation_dupl1(int[] n1) {
         Arrays.sort(n1);//避免重复计算
