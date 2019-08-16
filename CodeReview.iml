@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/beike0810_jack" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/beike0810_zhengwei" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/beike0810_leo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/beike0810_zds" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/kedaxunfei_Leo20190816" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
