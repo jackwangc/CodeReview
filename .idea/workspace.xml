@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/beike0810_zhengwei/second.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/beike0810_zhengwei/forth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beike0810_zhengwei/forth.java" afterDir="false" />
     </list>
@@ -61,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.forth">
+  <component name="RunManager" selected="Application.second">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -403,14 +404,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="beike0810_jack.Main" />
-      <module name="CodeReview" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Second" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Second" />
       <module name="CodeReview" />
@@ -427,6 +420,14 @@
     </configuration>
     <configuration name="forth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="forth" />
+      <module name="CodeReview" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="second" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="second" />
       <module name="CodeReview" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -512,19 +513,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.First" />
       <item itemvalue="Application.Second" />
       <item itemvalue="Application.forth" />
+      <item itemvalue="Application.second" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.second" />
         <item itemvalue="Application.forth" />
         <item itemvalue="Application.Second" />
         <item itemvalue="Application.First" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -547,7 +548,7 @@
       <workItem from="1565420309222" duration="1794000" />
       <workItem from="1565426737298" duration="9605000" />
       <workItem from="1565870448664" duration="1547000" />
-      <workItem from="1565949028442" duration="2050000" />
+      <workItem from="1565949028442" duration="2630000" />
     </task>
     <task id="LOCAL-00001" summary="主函数">
       <created>1565086412671</created>
@@ -605,7 +606,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565949173927</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="zhengwei1">
+      <created>1565952484261</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565952484261</updated>
+    </task>
+    <task id="LOCAL-00010" summary="zhengwei12">
+      <created>1565952540010</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1565952540010</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +653,9 @@
     <MESSAGE value="pacege-jack" />
     <MESSAGE value="pacege-zhengwei" />
     <MESSAGE value="zhengwei" />
-    <option name="LAST_COMMIT_MESSAGE" value="zhengwei" />
+    <MESSAGE value="zhengwei1" />
+    <MESSAGE value="zhengwei12" />
+    <option name="LAST_COMMIT_MESSAGE" value="zhengwei12" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
