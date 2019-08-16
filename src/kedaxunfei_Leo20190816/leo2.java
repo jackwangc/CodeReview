@@ -9,7 +9,7 @@ public class leo2 {
             Scanner scanner = new Scanner(System.in);
             String s = scanner.nextLine();
             int[] arr = readArr(s);
-            //execute(arr, target);
+            System.out.println(getKey(arr, 19,0,arr.length)+1);
         }
 
         public static int[] readArr(String s){
@@ -22,4 +22,17 @@ public class leo2 {
             return arr;
         }
 
+    public static int getKey(int[] arr, int key, int low, int high) {
+        int mid = (low + high) / 2;
+        if (low > high)
+            return -1;
+        if (key == arr[mid]) {
+            return mid;
+        } else if (key > arr[mid]) {
+            return getKey(arr, key, mid + 1, high);
+        } else {
+            return getKey(arr, key, low, mid - 1);
+        }
+
+    }
 }
