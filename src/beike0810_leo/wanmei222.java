@@ -23,7 +23,7 @@ public class wanmei222 {
         };
         int start=0;
         int[] shortPath = Dijsktra(weight2,start);
-
+//
         for(int i = 0;i < shortPath.length;i++)
             System.out.println("从"+start+"出发到"+i+"的最短距离为："+shortPath[i]);
 
