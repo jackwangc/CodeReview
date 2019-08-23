@@ -1,10 +1,23 @@
-//package beike0810_zds;
-
-/**
- * Created by lenovo on 2019/8/10.
- */
+import java.util.Scanner;
+import java.util.Arrays;
 public class Second {
-    public static int[] Dijsktra(int[][] weight,int start){
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x=6,y=6;
+        int[][] v = new int[x][y];
+        for(int i=0;i<x;i++){
+            for(int j=0;j<y;j++){
+                v[i][j]=sc.nextInt();
+            }
+        }
+
+        int[] r = sl(v,0);
+        for(int k=0;k<5;k++){
+            System.out.println(r[k]);
+        }
+
+    }
+    public static int[] sl(int[][] weight,int start){
         //接受一个有向图的权重矩阵，和一个起点编号start（从0编号，顶点存在数组中）
         //返回一个int[] 数组，表示从start到它的最短路径长度
         int n = weight.length;        //顶点个数
@@ -59,5 +72,4 @@ public class Second {
 
         return shortPath;
     }
-
 }
