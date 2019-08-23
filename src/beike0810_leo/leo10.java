@@ -8,7 +8,7 @@ public class leo10 {
         String s = scanner.nextLine();
         int target = scanner.nextInt();
         int[] arr = readArr(s);
-        execute(arr, target);
+        execute(arr, target);//
     }
 
     public static int[] readArr(String s){
