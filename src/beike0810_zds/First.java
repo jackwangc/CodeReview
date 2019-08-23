@@ -9,6 +9,9 @@ import java.util.Scanner;
  * Created by lenovo on 2019/8/10.
  */
 public class First {
+    public static  void main(String []args){
+        System.out.print("aaa");
+    }
 
     public  static  void  main(String []args){
         Scanner sc=new Scanner(System.in);
