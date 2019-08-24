@@ -24,7 +24,7 @@ public class leo10 {
     public static int findNum(int[] ceshi ){
         int num=0;
 
-
+        //函数体
         return num;
     }
 
