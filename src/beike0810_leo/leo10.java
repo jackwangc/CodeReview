@@ -1,41 +1,31 @@
 import java.util.Scanner;
-
-
+//猿辅导 第二题
 public class leo10 {
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.nextLine();
-        int target = scanner.nextInt();
-        int[] arr = readArr(s);
-        execute(arr, target);//
-    }
-
-    public static int[] readArr(String s){
-        String s2 = s.substring(1,s.length()-1);
-        String[] strs = s2.split(",");
-        int[] arr = new int[strs.length];
-        for(int i =0; i<strs.length; i++){
-            arr[i] = Integer.parseInt(strs[i]);
-        }
-        return arr;
-    }
-
-    private static void execute(int[] array, int m) {
-        int first = 0;
-        int last = array.length -1;
-        int sum = 0;
-        while(first < last ) {
-            sum = array[first] + array[last];
-            if (sum == m) {
-                System.out.println(array[first] + " " + array[last]);
-                first++;
-                last--;
-            } else if (sum < m) {
-                first++;
-            } else {
-                last--;
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int  c =Integer.parseInt(sc.nextLine()) ;
+        int[] re = new int[c];
+        for(int i=0;i<c;i++){
+            String[] s2 = sc.nextLine().split(" ");
+            int changdu = Integer.parseInt(s2[0]);
+            int[] ceshi = new int[changdu];
+            for(int k=0;k<changdu;k++){
+                ceshi[k]=Integer.parseInt(s2[k+1]);
             }
+
+            re[i]=findNum(ceshi);
         }
+        for(int j=0;j<c;j++){
+            System.out.println(re[j]);
+        }
+
+
     }
+    public static int findNum(int[] ceshi ){
+        int num=0;
+
+
+        return num;
+    }
+
 }
