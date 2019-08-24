@@ -20,6 +20,27 @@ public class leo10 {
         }
 
 
+//        Integer a =200;
+//        Integer b =200;
+//        System.out.print(a==b);
+//
+//        double d1 = 1.99d;
+//        double d2 = 1.88d;
+//        double d3 = 1.77d;
+//
+//        double d4 =d1-d2;
+//        double d5 = d2-d3;
+
+
+//        int re=0;
+//        for(int i=0;i<100;i++){
+//            for(int j=0;j<100;j++){
+//                if(5*i+3*j==100) re++;
+//
+//            }
+//        }
+//        System.out.println(re);
+
     }
     public static int findNum(int[] ceshi ){
         int num=0;
