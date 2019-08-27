@@ -1,0 +1,6 @@
+/**
+ * lx
+ */
+class Solution {
+    
+}
