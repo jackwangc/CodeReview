@@ -1,50 +1,56 @@
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
-/**
- 给定两个正整数N和S，你需要找对所有的长度为N的正整数数列中，满足单调递增以及总和为S的数列有多少个
- 测试 输入 3 10 输出 4
- */
 public class leo1 {
-    private static int num =0;
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n =sc.nextInt();
-        int s =sc.nextInt();
-        findNum(1,n,s);
-        System.out.println(num%1000000007);
-    }
-    public static boolean   findNum(int start,int n,int s){
-            if(n==1){
-                if(start==s) {
-                    num++;
-                    return true;
-                }
-                if(start>s){
-                    return true;
-                }
 
+    /*
+     * 阿里巴巴笔试 有一个字符串它的构成是词+空格的组合，如“北京 杭州 杭州 北京”， 要求输入一个匹配模式（简单的以字符来写），
+     * 比如 aabb,来判断该字符串是否符合该模式， 举个例子：
+     *
+     * pattern = "abba", str="北京 杭州 杭州 北京" 返回 ture
+     * pattern = "aabb", str="北京 杭州 杭州 北京" 返回 false
+     * pattern = "baab", str="北京 杭州 杭州 北京" 返回 ture
+     *
+     */
+    public static boolean wordPattern(String pattern, String str) {
+        if (str == null || pattern == null)
+            return false;
+
+        //reflect ： 模式字符与词的匹配关系
+        //strs : 切分好的词
+        Map<Character, String> reflect = new HashMap<>();
+        String[] strs = str.split(" ");
+        if (pattern.length() != strs.length) return false;
+
+        //遍历模式，在匹配关系中查找key
+        //如果找到，比较value是否与词是否相同，如果不同，返回false
+        //如果未找到，查找value，如果存在返回false，不存在则将key，value存入
+        for (int i = 0; i < pattern.length(); i++) {
+            boolean haveKey=reflect.containsKey(pattern.charAt(i));
+            boolean haveValue=reflect.containsValue(strs[i]);
+            String v=reflect.get(pattern.charAt(i));
+            if(haveKey){
+                if (!v.equals(strs[i])) return false;
+            }else{
+                if(haveValue) return false;
+                else reflect.put(pattern.charAt(i), strs[i]);
             }
+        }
 
-            if(n>1&&s>start){
-                for(int i=start;i<s;i++){
-                    if(findNum(i+1,n-1,s-start)){
-                        break;
-                    }
-                }
-            }
-        return false;
+        //输入匹配关系
+        for(Character ch:reflect.keySet()){
+            System.out.println(ch+":"+reflect.get(ch));
+        }
+
+        return true;
     }
 
-    //判断是否存在长度为N，总和为S的单调递增正整数序列
-    public  static  boolean check(int statr,int n,int s){
-        boolean result= true;
-        int min=statr;
-        for(int i=1;i<=n;i++){
-            min=min+i;
+    public static void main(String[] args) {
+        boolean flag = wordPattern("abba", "北京 杭州 杭州 北京");
+        if (flag) {
+            System.out.println("模式匹配");
+        } else {
+            System.out.println("模式不匹配");
         }
-        if(s<min){
-            result=false;
-        }
-        return  result;
     }
 }
