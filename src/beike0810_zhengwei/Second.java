@@ -3,26 +3,25 @@ public class Second {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int L = sc.nextInt();
-        long a, b, c;
-        long l, r;
-        int ans = 0;
-        for (a = 1; a <= L / 3; a++) {
-            l = a + 1;
-            r = L - a - 1;
-            while (l < r) {
-                b = (l + r) / 2;
-                c = L - a - b;
-                if (a * a + b * b == c * c) {
-                    ans++;
+        int p = sc.nextInt();
+        long x, y, z, m ,n;
+        int res = 0;
+        for (x = 1; x <= p / 3; x++) {
+            m = x + 1;
+            n = p - x - 1;
+            while (m <= n) {
+                y = (m + n) / 2;
+                z = p - x - y;
+                if (x * x + y * y == z * z) {
+                    res++;
                     break;
-                } else if (a * a + b * b < c * c) {
-                    l = b + 1;
+                } else if (x * x + y * y < z * z) {
+                    m = y + 1;
                 } else {
-                    r = b - 1;
+                    n = y - 1;
                 }
             }
         }
-        System.out.println(ans);
+        System.out.println(res);
     }
 }
