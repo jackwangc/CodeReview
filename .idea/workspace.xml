@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="liyao  文件 留三个">
-      <change afterPath="$PROJECT_DIR$/src/beike0810_zhengwei/Solution.java" afterDir="false" />
+    <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/beike0810_zhengwei/Solution2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -542,7 +542,7 @@
       <workItem from="1566989988904" duration="6441000" />
       <workItem from="1567080686818" duration="193000" />
       <workItem from="1567080930327" duration="423000" />
-      <workItem from="1567238159652" duration="1042000" />
+      <workItem from="1567238159652" duration="2100000" />
     </task>
     <task id="LOCAL-00001" summary="liyao test">
       <created>1566554208593</created>
@@ -586,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566643627723</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="第二题">
+      <created>1567242572863</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1567242572863</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +623,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="liyao test" />
     <MESSAGE value="liyao  文件 留三个" />
-    <option name="LAST_COMMIT_MESSAGE" value="liyao  文件 留三个" />
+    <MESSAGE value="第二题" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二题" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
