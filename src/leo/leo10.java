@@ -6,7 +6,7 @@ public class leo10 {
         String[] input = sc.nextLine().split(",");
         int[] nums = new int[input.length];
         for(int i=0;i<nums.length;i++){
-            nums[i]=Integer.parseInt(input[i]);
+            nums[i]=Integer.parseInt(input[i].trim());
         }
         Arrays.sort(nums);
         int result=0;
