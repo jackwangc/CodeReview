@@ -12,7 +12,7 @@ public class leo20 {
         for(int i=0;i<scs.length-1;i++){
 
             System.out.print(nums[i]+",");
-
+///
         }
         System.out.print(nums[scs.length-1]);
     }
