@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class leo20 {
+public class leo50 {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int n = sc.nextInt();
