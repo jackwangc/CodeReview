@@ -1,41 +1,52 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class leo30 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.next();
-        System.out.print(s);
-        thread3.start();
-        thread2.start();
-        thread1.start();
+        Scanner sc =new Scanner(System.in);
+        String[] scs = sc.nextLine().split("],");
+        //String[] numSting=scs[0].split(",");
+        int target =Integer.parseInt(scs[scs.length-1]);
+        String[] scs1 = scs[0].substring(1,scs[0].length()).split(",");
+        int[] nums = new int[scs1.length];
+        for(int i=0;i<scs1.length;i++){
+            nums[i]=Integer.parseInt(scs1[i]);
+        }
+        Arrays.sort(nums);
+        int index = findIndex(nums,target);
+        System.out.println(index);
     }
 
-    static Thread thread1 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            System.out.print("_A");
-        }
-    });
-    static Thread thread2 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            try {
-                thread1.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+    private static int findIndex(int[] nums, int target) {
+        if(nums.length==0) return-1;
+        if(nums.length==1) return 0;
+
+        int p1=0,p2=nums.length-1;
+        while(p1<p2){
+            int mid =p1+(p2-p1)/2;
+            if(target==nums[mid]){
+                p2=mid;
+            }else if(target>nums[mid]){
+                p1=mid+1;
+            }else{
+                p2=mid-1;
             }
-            System.out.print("_B");
         }
-    });
-    static Thread thread3 = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            try {
-                thread2.join();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("_C");
+        if(nums[p2]==target){
+            return p2;
         }
-    });
+
+        return -1;
+    }
+    private static int forFindIndex(int[] nums, int target) {
+        if(nums.length==0) return-1;
+        if(nums.length==1) return 0;
+
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]==target) return i;
+        }
+
+        return -1;
+    }
+
+
 }
