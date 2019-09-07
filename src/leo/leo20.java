@@ -7,7 +7,7 @@ public class leo20 {
         int m = sc.nextInt();
         int re = solution(n,m);
 
-        System.out.print(re);
+        System.out.print(re%1000000007);
     }
 
     private static int solution(int n, int m) {
