@@ -6,7 +6,7 @@ public class leo40 {
         int m = sc.nextInt();
         sc.close();
         long res = func(n, m);
-        System.out.println(res % 1000000007);
+        System.out.println(res%1000000007);
     }
 
     private static long func(int n, int m) {
@@ -30,15 +30,19 @@ public class leo40 {
      * @return
      */
     private static long cal(int i, int n) {
-        int x = 1;
-        int y = 1;
-        int t = n;
-        for (int c = 0; c < i; c++) {
-            x *= t--;
+        if(i<=1){
+            return (long)n;
         }
-        for (int c = i; c > 0; c--) {
+        long x = 1;
+        long y = 1;
+        int t = n;
+        for (int c = 0; c < i; c++,t--) {
+            x *= t;
+        }
+
+        for (int c = i;c > 1;c--) {
             y *= c;
         }
-        return (long) x / y;
+        return x /y;
     }
 }
