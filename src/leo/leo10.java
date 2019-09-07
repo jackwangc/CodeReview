@@ -11,19 +11,22 @@ public class leo10 {
         int result= solution(arr);
         System.out.println(result);
 
-
-
-
-
-
-
-
     }
 
     private static int solution(int[] arr) {
-        int result=0;
+        int end = 0;
+        int maxPosition = 0;
+        int steps = 0;
+        for(int i = 0; i < arr.length - 1; i++){
+            //找能跳的最远的
+            maxPosition = Math.max(maxPosition, arr[i] + i);
+            if( i == end){ //遇到边界，就更新边界，并且步数加一
+                end = maxPosition;
+                steps++;
+            }
+        }
+        return steps;
 
-        return result;
     }
 
 
