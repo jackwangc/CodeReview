@@ -1,23 +1,44 @@
-import java.util.*;
-
+import java.util.Scanner;
 public class leo40 {
     public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int m =sc.nextInt();
-        int k =sc.nextInt();
-        int[][] obstacle = new int[k][2];
-        for(int i=0;i<k;i++){
-            obstacle[i][0] = sc.nextInt();
-            obstacle[i][1] = sc.nextInt();
-        }
-        //int result = solution(n,m,obstacle);
-        int result = 51;
-        System.out.println(result);
-
+        int m = sc.nextInt();
+        sc.close();
+        long res = func(n, m);
+        System.out.println(res % 1000000007);
     }
 
+    private static long func(int n, int m) {
+        if (n == 1 || m == 0) {
+            return 1;
+        }
+        if (m == 1) {
+            return n;
+        }
+        long res = 0;
+        for (int i = 0; i < m; i++) {
+            res += func(i + 1, m - i - 1) * cal(i + 1, n);
+        }
+        return res;
+    }
 
-
-
+    /**
+     * 计算排列组合 C_m^(i)
+     * @param i
+     * @param n
+     * @return
+     */
+    private static long cal(int i, int n) {
+        int x = 1;
+        int y = 1;
+        int t = n;
+        for (int c = 0; c < i; c++) {
+            x *= t--;
+        }
+        for (int c = i; c > 0; c--) {
+            y *= c;
+        }
+        return (long) x / y;
+    }
 }
