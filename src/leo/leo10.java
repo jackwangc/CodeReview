@@ -8,23 +8,23 @@ public class leo10 {
         for(int i=0;i<s.length;i++){
             arr[i]= Integer.parseInt(s[i]);
         }
-        int result= solution(arr);
-        System.out.println(result);
+        int r = solution(arr);
+        System.out.println(r);
 
     }
 
     private static int solution(int[] arr) {
         int end = 0;
         int maxPosition = 0;
-        int steps = 0;
+        int l = 0;
         for(int i = 0; i < arr.length - 1; i++){
             maxPosition = Math.max(maxPosition, arr[i] + i);
             if( i == end){
                 end = maxPosition;
-                steps++;
+                l++;
             }
         }
-        return steps;
+        return l;
 
     }
 
