@@ -3,40 +3,24 @@ import java.util.*;
 public class leo20 {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
-        String[] scs = sc.nextLine().split(" ");
-        int[] nums = new int[scs.length];
-        for(int i=0;i<scs.length;i++){
-            nums[i]=Integer.parseInt(scs[i]);
-        }
-        bubbleSort(nums);
-        for(int i=0;i<scs.length-1;i++){
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int re = solution(n,m);
 
-            System.out.print(nums[i]+",");
-/////
-        }
-        System.out.print(nums[scs.length-1]);
+        System.out.print(re);
     }
 
-    private static void bubbleSort(int[] nums) {
-        if(nums.length==1||nums.length==0) return;
+    private static int solution(int n, int m) {
+        int result=factorial(n)/(factorial(n-m)*factorial(m));
+        return  result;
+    }
 
-        for (int i = nums.length - 1; i > 0; i--) {
-            boolean swapped = false;
-            for (int j = 0; j < i; j++) {
-                if(nums[j] > nums[j+1]){
-                    swapped = true;
-                    swap(nums,j,j+1);
-                }
-            }
-            if(!swapped)
-                return;
+    public static int factorial(int x){
+        if(x == 0)
+            return 1;
+        for(int i = x-1; i > 0; i--){
+            x*=i;
         }
+        return x;
     }
-
-    private static void swap(int[] nums, int i, int j) {
-        int t = nums[i];
-        nums[i] = nums[j];
-        nums[j] = t;
-    }
-
 }
