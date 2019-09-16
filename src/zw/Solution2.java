@@ -1,6 +1,5 @@
 package zw;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Solution2 {
@@ -14,18 +13,21 @@ public class Solution2 {
         }
         System.out.print(maxSubArrayLen(num,k));
     }
-    public static int maxSubArrayLen(int[] nums, int k) {
-        if (nums.length == 0) return 0;
-        int sum = 0, max = 0;
-        HashMap<Integer,Integer> map = new HashMap<>();
-        map.put(0, -1);
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            if (map.containsKey(sum - k)) {
-                max = Math.max(max, i - map.get(sum - k));
+    public static int maxSubArrayLen(int[] arr, int k){
+        int len = arr.length;
+        int cnt = 0, max=0, i, j;
+
+        for(i=0; i<len; i++){
+            cnt = 0;
+
+            if(len-i <= max) break;
+
+            for(j=i; j<len; j++){
+                cnt += arr[j];
+                if(cnt == k && j-i+1 > max) max = j-i+1;
             }
-            if (!map.containsKey(sum)) map.put(sum, i);
         }
+
         return max;
     }
 }
