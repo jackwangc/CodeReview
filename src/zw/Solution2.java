@@ -1,33 +1,37 @@
-package zw;
-
-import java.util.Scanner;
-
-public class Solution2 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        int[] num = new int[n];
-        for (int i=0;i<n;i++){
-            num[i] = sc.nextInt();
-        }
-        System.out.print(maxSubArrayLen(num,k));
-    }
-    public static int maxSubArrayLen(int[] arr, int k){
-        int len = arr.length;
-        int cnt = 0, max=0, i, j;
-
-        for(i=0; i<len; i++){
-            cnt = 0;
-
-            if(len-i <= max) break;
-
-            for(j=i; j<len; j++){
-                cnt += arr[j];
-                if(cnt == k && j-i+1 > max) max = j-i+1;
+class Solution {
+    public boolean checkPossibility(int[] nums) {
+        //换一个思路，不拷贝数组然后排序了,具体分为更改第i个值，还是第i+1个值
+        int counts=1;
+        for(int i=0;i<nums.length-1;i++)
+        {
+            if(nums[i]>nums[i+1])
+            {
+                //第一个值必须变更改的为i，举例：423
+                if(i==0)
+                {
+                    counts--;
+                    continue;
+                }
+                //更改i，举例1546的5，其实就是i-1,i,i+1可以成为非递减数列
+                if(i-1>=0&&nums[i+1]>=nums[i-1])
+                {
+                    counts--;
+                }
+                //更改i+1，举例1304，此时i为3，要更改i+1(0)，假如将3改为-1，1和-1还是递减
+                //此时就是 i-1，i,i+1无法组成非递减数列，但i-1, i,i+2可以组成非递减数列，这样就让
+                // i-1,i,i+1,i+2变成非递减数列。这里的第二种情况就是i+1是数组的最后一个元素了，而i以及i之前的数（i-1，i-2，i-3）都已经按照非递减数列排列好了，那么我们就更改i+1就好，让他比i大即可
+                else if((i-1>=0&&i+2<nums.length&&nums[i+2]>=nums[i]&&nums[i+2]>=nums[i-1])||(i + 1 == nums.length-1))
+                    counts--;
+                else
+                    return false;
             }
+            if(counts<0)
+                return false;
         }
-
-        return max;
+        return true;
     }
-}
+
+    作者：coder_hezi
+    链接：https://leetcode-cn.com/problems/non-decreasing-array/solution/javajie-fa-xiang-xi-dai-ma-jie-da-by-coder_hezi/
+    来源：力扣（LeetCode）
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
