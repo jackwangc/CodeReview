@@ -15,6 +15,24 @@ public class Solution {
                 num[i][j] = temp;
             }
         }
+        if (m==1){
+            for (int i=n-1;i>=0;i--){
+                System.out.print(num[0][i]);
+                if (i!=0){
+                    System.out.print(" ");
+                }
+            }
+            return;
+        }
+        if (n==1){
+            for (int i=0;i<m;i++){
+                System.out.print(num[i][0]);
+                if (i!=m-1){
+                    System.out.print(" ");
+                }
+            }
+            return;
+        }
         ArrayList list = printMatrix(num);
         for (int i=0;i<list.size();i++){
             System.out.print(list.get(i));
@@ -48,7 +66,7 @@ public class Solution {
         }
         //右面
         for (int i=endY-1;i>=start;i--){
-            res.add(matrix[i][endY]);
+            res.add(matrix[i][endX]);
         }
         //上面
         for (int i=endX-1;i>=start+1;i--){
