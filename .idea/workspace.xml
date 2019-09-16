@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="999">
-      <change afterPath="$PROJECT_DIR$/src/zw/Solution.java" afterDir="false" />
+    <list id="af579d7f-584c-415c-bcf7-a84fb267a01c" name="Revert &quot;8.28&quot;" comment="Revert &quot;8.28&quot;&#10;&#10;This reverts commit 2bbca11" />
+    <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="2">
+      <change afterPath="$PROJECT_DIR$/src/zw/Solution2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <list id="af579d7f-584c-415c-bcf7-a84fb267a01c" name="Revert &quot;8.28&quot;" comment="Revert &quot;8.28&quot;&#10;&#10;This reverts commit 2bbca11" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zw/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="140">
+              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/zw/Solution2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,6 +92,7 @@
         <option value="$PROJECT_DIR$/src/beike0810_zhengwei/First.java" />
         <option value="$PROJECT_DIR$/src/beike0810_zhengwei/Second.java" />
         <option value="$PROJECT_DIR$/src/zw/Solution.java" />
+        <option value="$PROJECT_DIR$/src/zw/Solution2.java" />
       </list>
     </option>
   </component>
@@ -281,7 +294,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.Solution2">
     <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="First" />
       <module name="CodeReview" />
@@ -298,8 +311,13 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="zw.Main" />
+    <configuration name="Second" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Second" />
+      <module name="CodeReview" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="zw.Solution" />
       <module name="CodeReview" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -309,13 +327,8 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="Second" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Second" />
-      <module name="CodeReview" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="zw.Solution" />
+    <configuration name="Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="zw.Solution2" />
       <module name="CodeReview" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -367,19 +380,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.First" />
       <item itemvalue="Application.Second" />
       <item itemvalue="Application.First (1)" />
       <item itemvalue="Application.Solution" />
+      <item itemvalue="Application.Solution2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution2" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.First (1)" />
         <item itemvalue="Application.Second" />
         <item itemvalue="Application.First" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +410,7 @@
       <workItem from="1565086852659" duration="2498000" />
       <workItem from="1565321290909" duration="6328000" />
       <workItem from="1566991692787" duration="257000" />
-      <workItem from="1568626516577" duration="1065000" />
+      <workItem from="1568626516577" duration="2018000" />
     </task>
     <task id="LOCAL-00001" summary="主函数">
       <created>1565086412671</created>
@@ -448,11 +461,25 @@
       <option name="project" value="LOCAL" />
       <updated>1568626745980</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1">
+      <created>1568627600220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568627600220</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2">
+      <created>1568628024409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568628024409</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10864000" />
+    <option name="totallyTimeSpent" value="11817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -564,11 +591,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="主函数" />
     <MESSAGE value="输入测试" />
-    <MESSAGE value="1" />
     <MESSAGE value="11" />
     <MESSAGE value="000" />
     <MESSAGE value="999" />
-    <option name="LAST_COMMIT_MESSAGE" value="999" />
+    <MESSAGE value="1" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -599,13 +627,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/beike0810_leo/Leo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/beike0810_zds/First.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -753,8 +774,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/zw/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="140">
+          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zw/Solution2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
