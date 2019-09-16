@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="af579d7f-584c-415c-bcf7-a84fb267a01c" name="Revert &quot;8.28&quot;" comment="Revert &quot;8.28&quot;&#10;&#10;This reverts commit 2bbca11" />
-    <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="2">
-      <change afterPath="$PROJECT_DIR$/src/zw/Solution2.java" afterDir="false" />
+    <list default="true" id="93cd4af6-82e6-4bf8-a91c-9adbea790f86" name="Default Changelist" comment="3">
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/zw/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/zw/Solution.java" afterDir="false" />
     </list>
+    <list id="af579d7f-584c-415c-bcf7-a84fb267a01c" name="Revert &quot;8.28&quot;" comment="Revert &quot;8.28&quot;&#10;&#10;This reverts commit 2bbca11" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/zw/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+            <state relative-caret-position="120">
+              <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,14 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution2.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zw/Solution2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="400">
+              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -91,8 +89,8 @@
         <option value="$PROJECT_DIR$/src/beike0810_zhengwei/Main.java" />
         <option value="$PROJECT_DIR$/src/beike0810_zhengwei/First.java" />
         <option value="$PROJECT_DIR$/src/beike0810_zhengwei/Second.java" />
-        <option value="$PROJECT_DIR$/src/zw/Solution.java" />
         <option value="$PROJECT_DIR$/src/zw/Solution2.java" />
+        <option value="$PROJECT_DIR$/src/zw/Solution.java" />
       </list>
     </option>
   </component>
@@ -105,9 +103,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -155,7 +152,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565086585965" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/gospace/src/mine" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -174,10 +171,10 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/CodeReview.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Main.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/beike0810_zhengwei/Second.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo10.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo20.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo30.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo40.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -185,15 +182,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/other/Solution.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/beike0810_zhengwei/Solution.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/beike0810_zhengwei/Solution2.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/beike0810_zhengwei/first.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo10.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo20.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo30.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo40.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/leo/leo50.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -294,7 +282,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution2">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="First (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="First" />
       <module name="CodeReview" />
@@ -388,8 +376,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution2" />
         <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.Solution2" />
         <item itemvalue="Application.First (1)" />
         <item itemvalue="Application.Second" />
         <item itemvalue="Application.First" />
@@ -410,7 +398,7 @@
       <workItem from="1565086852659" duration="2498000" />
       <workItem from="1565321290909" duration="6328000" />
       <workItem from="1566991692787" duration="257000" />
-      <workItem from="1568626516577" duration="2018000" />
+      <workItem from="1568626516577" duration="5087000" />
     </task>
     <task id="LOCAL-00001" summary="主函数">
       <created>1565086412671</created>
@@ -475,15 +463,28 @@
       <option name="project" value="LOCAL" />
       <updated>1568628024409</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2">
+      <created>1568628637830</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568628637830</updated>
+    </task>
+    <task id="LOCAL-00011" summary="3">
+      <created>1568628825500</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1568628825500</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11817000" />
+    <option name="totallyTimeSpent" value="14886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="12" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
@@ -596,7 +597,8 @@
     <MESSAGE value="999" />
     <MESSAGE value="1" />
     <MESSAGE value="2" />
-    <option name="LAST_COMMIT_MESSAGE" value="2" />
+    <MESSAGE value="3" />
+    <option name="LAST_COMMIT_MESSAGE" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -615,7 +617,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/leo/leo10.java</url>
-          <line>6</line>
+          <line>7</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -772,20 +774,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zw/Solution.java">
+    <entry file="file://$PROJECT_DIR$/src/zw/Solution2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zw/Solution2.java">
+    <entry file="file://$PROJECT_DIR$/src/zw/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="120">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
