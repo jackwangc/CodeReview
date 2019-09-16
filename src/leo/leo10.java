@@ -14,10 +14,10 @@ public class leo10 {
     }
     private static int solution(int[] arr) {
         int minStep=-1;
-        for(int i=1;i<arr.length/2;i++){
-            int index=i;
+        for(int i=1;i<arr.length/2;i++){ //第一步
+            int j=i;
             int steps=1;
-            for(int j=index;j<arr.length;){
+            while(j<arr.length){  //第二步开始
                 j+=arr[j];
                 steps++;
                 if(j==arr.length-1) {
