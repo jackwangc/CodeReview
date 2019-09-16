@@ -12,7 +12,23 @@ public class leo10 {
         }
         System.out.println(count(nums,s));
     }
-    public static long count(int[] nums,int s) {
+    public static int count(int[] nums,int s) {
+        if(nums == null || nums.length == 0)
+            return 0;
+        HashMap<Integer,Integer> m = new HashMap<>();
+        m.put(0,-1);
+        int result = 0;
+        int tempsum = 0;
+        for(int i = 0;i < nums.length;i++) {
+            tempsum += nums[i];
+            if(m.containsKey(tempsum - s))
+                result = Math.max(i - m.get(tempsum - s),result);
+            if(!m.containsKey(tempsum))
+                m.put(tempsum,i);
+        }
+        return result;
+    }
+    public static long count2(int[] nums,int s) {
         if(nums == null || nums.length == 0)
             return 0;
         HashMap<Long,Integer> m = new HashMap<>();
