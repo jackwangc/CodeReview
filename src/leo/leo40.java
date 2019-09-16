@@ -1,48 +1,37 @@
-import java.util.Scanner;
-public class leo40 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
-        sc.close();
-        long res = func(n, m);
-        System.out.println(res%1000000007);
-    }
-
-    private static long func(int n, int m) {
-        if (n == 1 || m == 0) {
-            return 1;
-        }
-        if (m == 1) {
-            return n;
-        }
-        long res = 0;
-        for (int i = 0; i < m; i++) {
-            res += func(i + 1, m - i - 1) * cal(i + 1, n);
-        }
-        return res;
-    }
-
-    /**
-     * 计算排列组合 C_m^(i)
-     * @param i
-     * @param n
-     * @return
-     */
-    private static long cal(int i, int n) {
-        if(i<=1){
-            return (long)n;
-        }
-        long x = 1;
-        long y = 1;
-        int t = n;
-        for (int c = 0; c < i; c++,t--) {
-            x *= t;
-        }
-
-        for (int c = i;c > 1;c--) {
-            y *= c;
-        }
-        return x /y;
-    }
-}
+//class Solution {
+//    public void solve(char[][] ch) {
+//        if (  ch.length == 0||ch == null ) return;
+//        int a = ch.length;
+//        int b = ch[0].length;
+//        for (int i = 0; i < a; i++) {
+//            for (int j = 0; j < b; j++) {
+//                boolean edgeFlag =   i == a - 1 || j == b - 1||i == 0 || j == 0;
+//                if (edgeFlag && ch[i][j] == 'O') {
+//                    dfs(ch, i, j);
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < a; i++) {
+//            for (int j = 0; j < b; j++) {
+//                if (ch[i][j] == 'O') {
+//                    ch[i][j] = 'X';
+//                }
+//                if (ch[i][j] == '#') {
+//                    ch[i][j] = 'O';
+//                }
+//            }
+//        }
+//    }
+//
+//    public void dfs(char[][] ch, int i, int j) {
+//        if (i < 0 || j < 0 || i >= ch.length  || j >= ch[0].length || ch[i][j] == 'X' || ch[i][j] == '#') {
+//            return;
+//        }
+//        ch[i][j] = '#';
+//        dfs(ch, i - 1, j);
+//        dfs(ch, i + 1, j);
+//        dfs(ch, i, j - 1);
+//        dfs(ch, i, j + 1);
+//    }
+//}
