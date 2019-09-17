@@ -7,23 +7,27 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String ss[] = s.split(" ");
-        int n = Integer.valueOf(ss[0]);
-        int m = Integer.valueOf(ss[1]);
-        int k = Integer.valueOf(ss[2]);
+        long n = Long.valueOf(ss[0]);
+        long m = Long.valueOf(ss[1]);
+        long k = Long.valueOf(ss[2]);
         if (k==m*n){
             System.out.print(0);
             return;
         }
-        int res = Integer.MAX_VALUE;
-        int left;
-        int i;
+        long res = Integer.MAX_VALUE;
+        long left;
+        long i;
+        long pre = Integer.MAX_VALUE;
         for (i=0;i<n;i++){
             left = n-i;
-            int right_max = k/left;
+            long right_max = k/left;
             if (right_max>=m){
                 res = Math.min(res,i);
             }else {
                 res = Math.min(res,i+(m-right_max));
+            }
+            if ((i+right_max)>pre){
+                break;
             }
         }
         System.out.println(Math.min(m,Math.min(n,res)));
