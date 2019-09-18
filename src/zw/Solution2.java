@@ -1,37 +1,64 @@
-class Solution {
-    public boolean checkPossibility(int[] nums) {
-        //换一个思路，不拷贝数组然后排序了,具体分为更改第i个值，还是第i+1个值
-        int counts=1;
-        for(int i=0;i<nums.length-1;i++)
-        {
-            if(nums[i]>nums[i+1])
-            {
-                //第一个值必须变更改的为i，举例：423
-                if(i==0)
-                {
-                    counts--;
-                    continue;
-                }
-                //更改i，举例1546的5，其实就是i-1,i,i+1可以成为非递减数列
-                if(i-1>=0&&nums[i+1]>=nums[i-1])
-                {
-                    counts--;
-                }
-                //更改i+1，举例1304，此时i为3，要更改i+1(0)，假如将3改为-1，1和-1还是递减
-                //此时就是 i-1，i,i+1无法组成非递减数列，但i-1, i,i+2可以组成非递减数列，这样就让
-                // i-1,i,i+1,i+2变成非递减数列。这里的第二种情况就是i+1是数组的最后一个元素了，而i以及i之前的数（i-1，i-2，i-3）都已经按照非递减数列排列好了，那么我们就更改i+1就好，让他比i大即可
-                else if((i-1>=0&&i+2<nums.length&&nums[i+2]>=nums[i]&&nums[i+2]>=nums[i-1])||(i + 1 == nums.length-1))
-                    counts--;
-                else
-                    return false;
-            }
-            if(counts<0)
-                return false;
-        }
-        return true;
-    }
+package zw;
 
-    作者：coder_hezi
-    链接：https://leetcode-cn.com/problems/non-decreasing-array/solution/javajie-fa-xiang-xi-dai-ma-jie-da-by-coder_hezi/
-    来源：力扣（LeetCode）
-    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+public class Solution2 {
+    private static int N;
+    private static int M;
+    private static int max = 10000;
+    private static int[] visit;
+    private static int[][] distance;
+    private static int[] bestmin;
+
+    public static int Dijkstra() {
+        visit[1] = 1;
+        bestmin[1] = 0;
+        for(int l = 2; l <= N; l++) {
+            int temp = max;
+            int k = -1;
+            for(int i = 2; i <= N; i++) {
+                if(visit[i] == 0 && distance[1][i] < temp) {
+                    temp = distance[1][i];
+                    k = i;
+                }
+            }
+            visit[k] = 1;
+            bestmin[k] = temp;
+            for(int i = 2; i <= N; i++) {
+                if(visit[i] == 0 && (distance[1][k] + distance[k][i]) < distance[1][i]) {
+                    distance[1][i] = distance[1][k] + distance[k][i];
+                }
+            }
+        }
+        return bestmin[N];
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int T = input.nextInt();
+        while(T-->0) {
+            N = input.nextInt();
+            M = input.nextInt();
+            bestmin = new int[N + 1];
+            distance = new int[N + 1][N + 1];
+            visit = new int[N + 1];
+            for (int i = 1; i <= N; i++) {
+                for (int j = 1; j <= N; j++) {
+                    if (i == j)
+                        distance[i][j] = 0;
+                    else
+                        distance[i][j] = max;
+                }
+                bestmin[i] = max;
+            }
+            for (int i = 1; i <= M; i++) {
+                int x = input.nextInt();
+                int y = input.nextInt();
+                distance[x][y] = 1;
+            }
+            input.close();
+            int minLen = Dijkstra();
+            if (minLen <= 2)
+                System.out.println("POSSIBLE");
+            else
+                System.out.println("IMPOSSIBLE");
+        }
+    }
+}
