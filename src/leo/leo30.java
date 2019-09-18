@@ -5,22 +5,21 @@ public class leo30 {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         String[] strs = str.substring(1,str.length()-1).split(", ");
-        int[] nums = new int[strs.length];
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = Integer.parseInt(strs[i]);
+        int[] m = new int[strs.length];
+        for (int i = 0; i < m.length; i++) {
+            m[i] = Integer.parseInt(strs[i]);
         }
-        System.out.println(FindGreatestSumOfSubArray(nums));
+        int r = f(m);
+        System.out.println(r);
     }
 
-    public static int FindGreatestSumOfSubArray(int[] nums) {
-        if (nums == null || nums.length == 0)
-            return 0;
-        int greatestSum = Integer.MIN_VALUE;
-        int sum = 0;
-        for (int val : nums) {
-            sum = sum <= 0 ? val : sum + val;
-            greatestSum = Math.max(greatestSum, sum);
+    public static int f(int[] m) {
+        int s = 0;
+        int mSum = Integer.MIN_VALUE;
+        for (int val : m) {
+            s = s <= 0 ? val : s + val;
+            mSum = Math.max(mSum, s);
         }
-        return greatestSum;
+        return mSum;
     }
 }

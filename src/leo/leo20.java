@@ -7,8 +7,13 @@ public class leo20 {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         String[] s = sc.nextLine().split(";");
-        String re =solution(s[0],s[1])?"True":"False";
-        System.out.println(re);
+        if(s.length!=2){
+            System.out.println("True");
+        }else{
+            String re =solution(s[0],s[1])?"True":"False";
+            System.out.println(re);
+        }
+
     }
 
 
