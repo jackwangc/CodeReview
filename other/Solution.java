@@ -2,34 +2,29 @@ import java.util.Scanner;
 
 class Second {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int l = sc.nextInt();
-        int[] arr1 = new int[l];
-        int[] arr2 = new int[l];
-        for (int i = 0; i < l; i++) {
-            arr1[i] = sc.nextInt();
+    public void removeDuplicates(ListNode head) {
+        // 在这里编写代码
+        if (head.next == null){
+            return;
         }
-        for (int i = 0; i < l; i++) {
-            arr2[i] = sc.nextInt();
-        }
-        int num = 0;
-        int flag;
-        int first = 0;
-        int[] arr3 = new int[l];
-        for (int i = first ; i < l; i++) {
-            flag = arr1[i];
-            for (int j = first; j < l; j++) {
-                if (arr2[j] == flag){
-                    num++;
-                    first= j;
-                    arr3[i] = arr2[j];
-                    break;
-                } else {
-                    continue;
+        ListNode node = new ListNode(0);
+        node.next = head;
+        while (head.next != null && head != null) {
+            if(head.next.val == head.val) {
+                head = head.next;
+                int val = head.val;
+                while (head.next.val == val && head.next != null) {
+                    head.next = head.next.next;
+                    head = head.next;
                 }
+            }else{
+                head = head.next;
             }
+
         }
-        System.out.print(l - num);
+        while (node.next != null){
+            System.out.print(node.next.val + " ");
+            node = node.next;
+        }
     }
 }
