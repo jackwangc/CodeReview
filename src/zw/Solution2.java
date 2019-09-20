@@ -1,64 +1,50 @@
 package zw;
 
-public class Solution2 {
-    private static int N;
-    private static int M;
-    private static int max = 10000;
-    private static int[] visit;
-    private static int[][] distance;
-    private static int[] bestmin;
+import java.util.Scanner;
 
-    public static int Dijkstra() {
-        visit[1] = 1;
-        bestmin[1] = 0;
-        for(int l = 2; l <= N; l++) {
-            int temp = max;
-            int k = -1;
-            for(int i = 2; i <= N; i++) {
-                if(visit[i] == 0 && distance[1][i] < temp) {
-                    temp = distance[1][i];
-                    k = i;
-                }
-            }
-            visit[k] = 1;
-            bestmin[k] = temp;
-            for(int i = 2; i <= N; i++) {
-                if(visit[i] == 0 && (distance[1][k] + distance[k][i]) < distance[1][i]) {
-                    distance[1][i] = distance[1][k] + distance[k][i];
-                }
-            }
-        }
-        return bestmin[N];
-    }
+public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int T = input.nextInt();
-        while(T-->0) {
-            N = input.nextInt();
-            M = input.nextInt();
-            bestmin = new int[N + 1];
-            distance = new int[N + 1][N + 1];
-            visit = new int[N + 1];
-            for (int i = 1; i <= N; i++) {
-                for (int j = 1; j <= N; j++) {
-                    if (i == j)
-                        distance[i][j] = 0;
-                    else
-                        distance[i][j] = max;
-                }
-                bestmin[i] = max;
-            }
-            for (int i = 1; i <= M; i++) {
-                int x = input.nextInt();
-                int y = input.nextInt();
-                distance[x][y] = 1;
-            }
-            input.close();
-            int minLen = Dijkstra();
-            if (minLen <= 2)
-                System.out.println("POSSIBLE");
-            else
-                System.out.println("IMPOSSIBLE");
-        }
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String[] ss = str.split(",");
+        if(check(ss))
+            System.out.println(true);
+        else
+            System.out.println(false);
     }
+
+    private static boolean check(String[] ss) {
+        int sum =0;
+        for (int i = 0; i < ss.length; i++) {
+            if(ss[i].contains("-")) {
+                int s = checkScope(ss[i]);
+                if(s==-1) return false;
+                sum+=s;
+            } else{
+                int s = checkSingle(ss[i]);
+                if(s==-1) return false;
+                sum+=s;
+            }
+        }
+        return sum<=1024?true:false;
+    }
+
+    private static int checkSingle(String s) {
+        int port = Integer.parseInt(s);
+        if(1<=port && port<=65535)
+            return 1;
+        else
+            return -1;
+    }
+
+    private static int checkScope(String s) {
+        String[] ss = s.split("-");
+        int portS = Integer.parseInt(ss[0]);
+        int portE = Integer.parseInt(ss[1]);
+        if(1<=portS && portS<=65535 && 1<=portE && portE<=65535 && portS <= portE)
+            return portE - portS + 1;
+        else
+            return -1;
+    }
+
 }

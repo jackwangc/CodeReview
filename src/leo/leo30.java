@@ -1,24 +1,25 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class leo30 {
     public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        String[] scs = sc.nextLine().split("],");
-
-        System.out.println();
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String[] strs = str.substring(1,str.length()-1).split(", ");
+        int[] m = new int[strs.length];
+        for (int i = 0; i < m.length; i++) {
+            m[i] = Integer.parseInt(strs[i]);
+        }
+        int r = f(m);
+        System.out.println(r);
     }
 
-
-
-    public int maxArea(int[] height) {
-        int m = 0, l = 0, r = height.length - 1;
-        while (l < r) {
-            m = Math.max(m, Math.min(height[l], height[r]) * (r - l));
-            if (height[l] > height[r])
-                r--;
-            else
-                l++;
+    public static int f(int[] m) {
+        int s = 0;
+        int mSum = Integer.MIN_VALUE;
+        for (int val : m) {
+            s = s <= 0 ? val : s + val;
+            mSum = Math.max(mSum, s);
         }
-        return m;
+        return mSum;
     }
 }
