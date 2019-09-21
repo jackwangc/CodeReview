@@ -1,25 +1,22 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class leo10 {
-
     public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        int n = sc.nextInt();
-        int[] s = new int[n];
-        for(int i=0;i<n;i++){
-            s[i] = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-->0){
+            int num = sc.nextInt();
+            System.out.println(getMinSumToN(num));
         }
-        int re = f(s);
-        System.out.println(re);
     }
 
-    private static int f(int[] s) {
-        if(s.length==0) return 0;
-        int r=s[0];
-        for(int j=1;j<s.length;j++){
-            r^=s[j];
-        }
-        return r;
+    private static String getMinSumToN(int num) {
+        // 除首位的位数
+        int n = num/9;
+        int first = num % 9;
+        String res = num%9 == 0?"":first + "";
+        for (int i = 0; i < n; i++)
+            res +="9";
+        return res;
     }
-
 }
