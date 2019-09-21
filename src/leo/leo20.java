@@ -24,8 +24,10 @@ public class leo20 {
     static int op=0;
     private static void so(int[] abpq) {
         if(abpq[0]>=abpq[1]) return;
-        if((abpq[0]+abpq[3])>=(abpq[2]*abpq[3])){
-            abpq[0]+=abpq[3];
+        int a = abpq[0]+abpq[2]+abpq[2];
+        int b = abpq[0]+abpq[2]*abpq[3];
+        if(a>=b){
+            abpq[0]+=abpq[2];
             op++;
         }else{
             abpq[2]*=abpq[3];

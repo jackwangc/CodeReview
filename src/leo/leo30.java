@@ -3,23 +3,37 @@ import java.util.Scanner;
 public class leo30 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        String[] strs = str.substring(1,str.length()-1).split(", ");
-        int[] m = new int[strs.length];
-        for (int i = 0; i < m.length; i++) {
-            m[i] = Integer.parseInt(strs[i]);
+        int t = sc.nextInt();
+        while(t-->0){
+            int n = sc.nextInt();
+            int[] nums = new int[n];
+            for (int i = 0; i < n; i++)
+                nums[i] = sc.nextInt();
+            System.out.println(maxConLen(nums));
         }
-        int r = f(m);
-        System.out.println(r);
     }
 
-    public static int f(int[] m) {
-        int s = 0;
-        int mSum = Integer.MIN_VALUE;
-        for (int val : m) {
-            s = s <= 0 ? val : s + val;
-            mSum = Math.max(mSum, s);
+    private static int maxConLen(int[] nums) {
+        if(nums.length<=1) return nums.length;
+        int res = 0;
+        // 得出累加和数组
+        int[] acc = new int[nums.length];
+        for (int i = 1; i < nums.length; i++)
+            acc[i] = acc[i-1] + nums[i-1];
+        // 得出符合完美序列的和
+        boolean[] fit = new boolean[nums.length];
+        for (int i = 0; i < nums.length; i++)
+            fit[i] = nums[i]>=acc[i]?true:false;
+        // 找出连续为true最长的长度
+        int maxLen = 0;
+        int cnt =0;
+        for (int i = 0; i < nums.length; i++) {
+            if(fit[i] == false){
+                maxLen = Math.max(maxLen,cnt);
+                cnt = 0;
+            }
+            cnt++;
         }
-        return mSum;
+        return maxLen;
     }
 }
