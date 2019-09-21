@@ -7,12 +7,12 @@ public class leo20 {
         int[] re = new int[t];
         for (int i = 0; i < t; i++) {
             op=0;
-            int[] abpq =new int[4];
-            abpq[0]=sc.nextInt();
-            abpq[1]=sc.nextInt();
-            abpq[2]=sc.nextInt();
-            abpq[3]=sc.nextInt();
-            so(abpq);
+            int[] a =new int[4];
+            a[0]=sc.nextInt();
+            a[1]=sc.nextInt();
+            a[2]=sc.nextInt();
+            a[3]=sc.nextInt();
+            so(a);
             re[i]=op;
         }
         for (int i = 0; i < t; i++) {
@@ -22,18 +22,18 @@ public class leo20 {
 
     }
     static int op=0;
-    private static void so(int[] abpq) {
-        if(abpq[0]>=abpq[1]) return;
-        int a = abpq[0]+abpq[2]+abpq[2];
-        int b = abpq[0]+abpq[2]*abpq[3];
-        if(a>=b){
-            abpq[0]+=abpq[2];
+    private static void so(int[] a) {
+        if(a[0]>=a[1]) return;
+        int flag1 = a[0]+a[2]+a[2];
+        int flag2 = a[0]+a[2]*a[3];
+        if(flag1>=flag2||a[3]==1||(a[0]+a[2]>a[1])){
+            a[0]+=a[2];
             op++;
         }else{
-            abpq[2]*=abpq[3];
+            a[2]*=a[3];
             op++;
         }
-        so(abpq);
+        so(a);
     }
 
 
