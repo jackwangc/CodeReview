@@ -1,35 +1,22 @@
 import java.util.*;
 public class leo40{
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int n = sc.nextInt();
-        long nn = f(n);
-        System.out.println(ff(nn));
+//        Scanner sc= new Scanner(System.in);
+//        int n = sc.nextInt();
+//        long nn = f(n);
+//        System.out.println(ff(nn));
     }
 
-    private static int f(int nn) {
-        int re=1;
-        int t=1;
-        while(nn>=t){
-            re=re*t;
-            t++;
-            while (re%10==0) re/=10;
-            re%=1000000000;
-        }
-        return re;
-    }
-
-    private static long ff(long nn) {
-        long re=nn%10;
-        while(nn!=0){
-            if(re!=0){
-                return re;
-            }else{
-                nn/=10;
-                re=nn%10;
-
+    public static int get(int []arr){
+        if(arr==null&&arr.length<1) return 0;
+        int sum=0;
+        for(int i=0;i<arr.length-1;i++){
+            for (int j=i+1;j<arr.length;j++){
+                if(arr[i]>arr[j]) {
+                    sum+=arr[i]-arr[j];
+                }
             }
         }
-        return re;
+        return sum;
     }
 }
