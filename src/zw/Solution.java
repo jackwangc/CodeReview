@@ -1,32 +1,41 @@
-pac
-import java.util.*;
-public class Main {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        System.out.println(solveEquation(s));
-
+public class vivo1 {
+    public static void main(String[] args) {
+        play(6,3);
     }
-    public static String solveEquation(String S) {
-        int left=0,right=0,j=0,sign=1;
-        for(int i=1;i<=S.length();i++){
-            if(i==S.length()||S.charAt(i)=='-'||S.charAt(i)=='+'||S.charAt(i)=='='){
-                if(S.charAt(i-1)=='x'){
-                    if(j==i-1||(S.charAt(j)=='+'&&j==i-2))left+=1*sign;
-                    else if(S.charAt(j)=='-'&&j==i-2)left+=-1*sign;
-                    else left+=(Integer.valueOf(S.substring(j,i-1)))*sign;
+
+    private static boolean same(int[] person,int l,int n) {
+        for (int i=0; i<l; i++) {
+            if(person[i] == n)
+                return true;
+        }
+        return false;
+    }
+
+    public static void play(int playerNum, int step ) {
+        int[] person = new int[playerNum];
+        int counter = 1;
+        while(true) {
+            if(counter > playerNum*step) {
+                break;
+            }
+            for(int i=1;i<=playerNum;i++) {
+                while(true) {
+                    if(same(person,playerNum,i) == false) {
+                        break;
+                    }else {
+                        i = i+1;
+                    }
                 }
-                else
-                    right+=(Integer.valueOf(S.substring(j,i)))*(-sign);
-                if(i!=S.length()&&S.charAt(i)=='='){
-                    j=++i;
-                    sign=-sign;
+                if(i > playerNum) {
+                    break;
                 }
-                else
-                    j=i;
+                if(counter%step == 0) {
+                    System.out.println(i+" ");
+                    person[counter/step -1] = i;
+                }
+                counter +=1;
             }
         }
-        if(left==0) return left==right?"Infinite results":"No result";
-        return "x="+(right/left);
+        System.out.println();
     }
-} 
+}
