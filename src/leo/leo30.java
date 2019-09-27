@@ -2,38 +2,21 @@ import java.util.Scanner;
 
 public class leo30 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-->0){
-            int n = sc.nextInt();
-            int[] nums = new int[n];
-            for (int i = 0; i < n; i++)
-                nums[i] = sc.nextInt();
-            System.out.println(maxConLen(nums));
+        int n, i, sum = 0;
+        int[] a = new int[21];
+        Scanner input = new Scanner(System.in);
+        n = input.nextInt();
+        for (i = 0; i < n; i++) {
+            a[i] = input.nextInt();
+            sum += a[i];
         }
-    }
+        int key, k, min = sum;        //这里！这里！原来我的代码是 “min = sum / 2;”，然后拿min去比较，结果，无论怎么写，都是Wrong answer....
 
-    private static int maxConLen(int[] nums) {
-        if(nums.length<=1) return nums.length;
-        int res = 0;
-        // 得出累加和数组
-        int[] acc = new int[nums.length];
-        for (int i = 1; i < nums.length; i++)
-            acc[i] = acc[i-1] + nums[i-1];
-        // 得出符合完美序列的和
-        boolean[] fit = new boolean[nums.length];
-        for (int i = 0; i < nums.length; i++)
-            fit[i] = nums[i]>=acc[i]?true:false;
-        // 找出连续为true最长的长度
-        int maxLen = 0;
-        int cnt =0;
-        for (int i = 0; i < nums.length; i++) {
-            if(fit[i] == false){
-                maxLen = Math.max(maxLen,cnt);
-                cnt = 0;
-            }
-            cnt++;
+        for (k = 0; k < (1 << n); k++) {
+            key = 0;
+            for (i = 0; i < n; i++) if ((1 & (k >> i)) != 0) key += a[i];
+            if (Math.abs(2 * key - sum) < min) min = Math.abs(2 * key - sum);
         }
-        return maxLen;
+        System.out.println(min);
     }
 }
